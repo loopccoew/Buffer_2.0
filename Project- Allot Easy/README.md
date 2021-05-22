@@ -44,7 +44,7 @@ Students can view the number of available seats of all courses offered by the co
 - **Check application status** : 
 Students can view their saved application details and check the allotment status: application incomplete / allotment pending / allotment result.
 - **Withdraw application** : 
-Student can choose to withdraw his/her application which will delete all the saved details and the student gets logged out of his account automatically.
+Student can choose to withdraw his/her application which will delete all the saved details and the student gets logged out of his/her account automatically.
 (This functionality is available only till the allotment process is executed by Admin)
 - **View cutoff marks** : 
 Students can view the cut off marks of various Engineering Courses that the college offers. (This functionality is available only *after* the Admin has run the allotment process)
@@ -66,7 +66,7 @@ Students can view the vacancies left after allotment is done, for each course of
 - pandas (for handling of csv data)
 - csv  (for reading and writing to csv file)
 - pywebio (for GUI)
-- flask (for deployment of the web app)
+- flask (for building the web application)
 
 ---
 ### What's next?
