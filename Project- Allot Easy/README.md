@@ -17,9 +17,9 @@ This project aims to **simulate the admission process** for Engineering Colleges
      <td>Admin Menu page</td>
   </tr>
   <tr>
-    <td><img src="screenshots/Login_page.png" width=285 height=430></td>
-    <td><img src="screenshots/Student_menu_page.png" width=285 height=430></td>
-    <td><img src="screenshots/Admin_menu_page.png" width=285 height=430></td>
+    <td><img src="screenshots/Login_page.png" width=auto height=auto></td>
+    <td><img src="screenshots/Student_menu_page.png" width=auto height=auto ></td>
+    <td><img src="screenshots/Admin_menu_page.png" width=auto height=auto></td>
   </tr>
  </table>
 
