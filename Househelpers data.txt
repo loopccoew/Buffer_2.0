@@ -1,0 +1,22 @@
+Name-Type of househelper#FlatNumbers
+Raju-Milkman#1#2#3#9
+Balu-Milkman#5#7#8#10#17
+Ramesh-Milkman#4#13#11#12#13#14#20
+Pratap-Milkman#6#16#17#18#19
+Vikram-Milkman#15#21#22#23#24#25
+Sarika-Maid#1#6
+Sushma-Maid#2#4#5
+Swati-Maid#3#7#8#12#15
+Pratibha-Maid#9#10#22#25
+Rekha-Maid#11#13#14#16#17#18
+Reema-Maid#19#20#21#23#24
+Rahul-Driver#4
+Gurudutta-Driver#9
+Maruti-Driver#13
+Kashinath-Driver#19
+Prabhakar-Driver#22
+Mandar-Newspaper vendor#1#2#3#4#5#6#7#8#9#10#11#12#13
+Raviraj-Newspaper vendor#14#15#16#17#18#19#20#21#22#23#24#25
+Bhalchandra-Garbage collector#1#2#3#4#5#6#7#8
+Pravin-Garbage collector#9#10#11#12#13#14#15#16#17
+Avinash-Garbage collector#18#19#20#21#22#23#24#25
