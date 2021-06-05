@@ -2,10 +2,10 @@ package logic;
 
 
 import java.util.*;
-//import java.lang.*;
+
 
 public class HashMap2 {
-	//@SuppressWarnings("unchecked")//////////////////////////////
+	
 	LinkedList<Entry2>[] hashmap2 = new LinkedList[2];
 	int size=0;//size==hashmap.length() !=hashmap.length
 	public HashMap2() {
@@ -19,7 +19,7 @@ public class HashMap2 {
 		return size;
 	}
 	
-	//@SuppressWarnings("unchecked")/////////////////////////////////
+	
 	public void resize() {
 		LinkedList<Entry2>[] oldhashmap2 = hashmap2;
 		hashmap2 = new LinkedList[size*2];
