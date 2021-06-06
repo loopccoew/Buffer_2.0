@@ -5,9 +5,9 @@ TOPIC : Clothing Store
 
 
 TEAM MEMBERS : 
- > Shwetali Jadhav (T.Y. IT),
- > Sampada Nemade (T.Y. IT),
- > Shravani Zope (T.Y. Comp)
+ 1. Shwetali Jadhav (T.Y. IT),
+ 2. Sampada Nemade (T.Y. IT),
+ 3. Shravani Zope (T.Y. Comp)
 
 
 
