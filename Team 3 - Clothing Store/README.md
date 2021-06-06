@@ -17,12 +17,12 @@ This program works as an offline clothing store.
 We have enlisted various categories according to which a 
 customer can choose and buy products.
   Features :
-  > Displaying categories of products, 
-  >  Choosing a product,
-  >  Adding it to cart,
-  >  Option for removal of a product from cart before billing,
-  >  Billing (with GST),
-  >  Exit
+  # Displaying categories of products, 
+  # Choosing a product,
+  # Adding it to cart,
+  # Option for removal of a product from cart before billing,
+  # Billing (with GST),
+  # Exit
 
 
 
