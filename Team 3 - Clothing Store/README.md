@@ -5,9 +5,9 @@ TOPIC : Clothing Store
 
 
 TEAM MEMBERS : 
- > Shwetali Jadhav (T.Y. IT)
- > Sampada Nemade (T.Y. IT)
- > Shravani Zope (T.Y. Comp)
+  Shwetali Jadhav (T.Y. IT)
+  Sampada Nemade (T.Y. IT)
+  Shravani Zope (T.Y. Comp)
 
 
 
@@ -96,5 +96,8 @@ WHAT'S NEXT FOR THE PROJECT :
 > We could connect a database to keep check of stock
 > We could maintain a database for registered users and their 
   purchases as well
+
+
+
 
 
