@@ -1,71 +1,100 @@
 # Buffer_2.0
-Buffer_2.0 repo to submit your projects to.Repository containing folder-wise code for all submissions to Buffer : A Project Series, conducted between April, 2021 - June, 2020.
 
-Each folder should contain a separate README to describe the files and project objective
-
-
-
-Introduction :
-This system is basically concerned with the 
-reservation of railway tickets to the passengers.
-In this we are discussing that how the reservation is 
-done with the feature of cancelling and waiting list.
-In the project we are going to include entities like
-Reservation
-Cancellation
-Display reserved and waiting list passengers
+TOPIC : Clothing Store
 
 
 
-OBJECTIVE OF THE PROJECT:
- All the manual work should be converted into 
-computerized so that the load of employees should 
-decrease.
- The data should be stored in computer rather than in 
-register manually.
- Booking can be done by sitting at your home only, no 
-need to visit the booking counter
+TEAM MEMBERS : 
+ > Shwetali Jadhav (T.Y. IT)
+ > Sampada Nemade (T.Y. IT)
+ > Shravani Zope (T.Y. Comp)
 
 
-Data Structure :
-Singly Linked List :
-Linked List is a sequential collection of 
-nodes.Which is faster than array in terms of 
-deletion of nodes. It’s memory is dynamically 
-allocated in runtime. This saves time and 
-space.
-Each node consists of four different data field :
-#Name
-#Age
-#Registration Number
-#Link to the next node
 
-Queue :
-Queue is a data structure in which 
-insertion and deletion takes place from 
-the ends. It follows First In First Out 
-Principle.
- Queue data structure is used here to 
-store the waiting list passengers. If anyone 
-cancels their ticket then that seat is 
-allocated to the first passenger in the 
-queue.
+INTRODUCTION : 
+This program works as an offline clothing store. 
+We have enlisted various categories according to which a 
+customer can choose and buy products.
+  Features :
+  > Displaying categories of products
+  > Choosing a product
+  > Adding it to cart
+  > Option for removal of a product from cart before billing
+  > Billing (with GST)
+  > Exit
 
 
-Learnings from this project :
-We learnt to solve real life problems by using 
-data Structures 
-Actual implementation of data structures that
-we have learnt
-By using technology how we can save our
+
+OBJECTIVE OF THE PROJECT :
+Enabling easy and efficient funtioning of an offline clothing 
+store reducing its dependency on manual work. The data i.e products 
+along with their details are stored in the system. 
+Products can be added or removed from the system as and when required.
 
 
-What’s next for the project :
-We can optimise our time complexity 
-using some different data structure.
-We can add features such as prioritising 
-on the basis of age or railway employees 
-and gender.
-We can add feature of tatkal reservation.
-We can provide this solution on online 
-portal.
+
+DATA STRUCTURE :
+Initially, we tried using a nested structure which comprised of 
+ArrayLists within ArrayLists. But accessing products was tedious.
+Hence we used HASHMAPS instead.
+
+  HASHMAPS:
+  > Java HashMap class implements the Map interface which 
+    allows us to store key and value pair, where keys should 
+    be unique. 
+  > It is easy to perform operations using the key index like 
+    updation, deletion, etc. HashMap class is found in the java.util 
+    package.
+  > HashMap in Java is like the legacy Hashtable class, but it is 
+    not synchronized.
+  > It allows us to store the null elements as well, but there 
+    should be only one null key.
+  > Java HashMap contains only unique keys.
+  > Java HashMap maintains no order.
+
+We also used ARRAYLISTS for storing the details of the products.
+
+  ARRAYLISTS : 
+  > Java ArrayList class uses a dynamic array for storing the 
+    elements. 
+  > It is like an array, but there is no size limit. We can add 
+    or remove elements anytime.
+  > So, it is much more flexible than the traditional array. It 
+    is found in the java.util package.
+  > The ArrayList in Java can have the duplicate elements also. 
+    It implements the List interface so we can use all the methods 
+    of List interface here.
+  > The ArrayList maintains the insertion order internally.
+  > Java ArrayList class is non synchronized.
+
+Classes used :
+  #Product
+   > gender
+   > category
+   > productType
+   > brand
+   > productPrice
+   > productName
+   > productSize
+  #Item
+   > size
+   > name
+   > price
+
+
+
+LEARNINGS FROM THIS PROJECT : 
+We had an experience working with real life like problem and 
+solving it using data structures and algorithms.
+We used our theoretical knowledge of data structures and practically
+implemented a use case.
+
+
+
+WHAT'S NEXT FOR THE PROJECT : 
+> We could enable profiles for owner and customer
+> We could connect a database to keep check of stock
+> We could maintain a database for registered users and their 
+  purchases as well
+
+
