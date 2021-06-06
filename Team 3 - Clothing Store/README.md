@@ -1,32 +1,32 @@
 # Buffer_2.0
 
-TOPIC : Clothing Store
+#TOPIC : Clothing Store
 
 
 
-TEAM MEMBERS : 
+#TEAM MEMBERS : 
  1. Shwetali Jadhav (T.Y. IT),
  2. Sampada Nemade (T.Y. IT),
  3. Shravani Zope (T.Y. Comp)
 
 
 
-INTRODUCTION : 
+#INTRODUCTION : 
 
 This program works as an offline clothing store. 
 We have enlisted various categories according to which a 
 customer can choose and buy products.
   Features :
-  # Displaying categories of products, 
-  # Choosing a product,
-  # Adding it to cart,
-  # Option for removal of a product from cart before billing,
-  # Billing (with GST),
-  # Exit
+  * Displaying categories of products, 
+  * Choosing a product,
+  * Adding it to cart,
+  * Option for removal of a product from cart before billing,
+  * Billing (with GST),
+  * Exit
 
 
 
-OBJECTIVE OF THE PROJECT :
+#OBJECTIVE OF THE PROJECT :
 Enabling easy and efficient funtioning of an offline clothing 
 store reducing its dependency on manual work. The data i.e products 
 along with their details are stored in the system. 
@@ -34,7 +34,7 @@ Products can be added or removed from the system as and when required.
 
 
 
-DATA STRUCTURE :
+#DATA STRUCTURE :
 Initially, we tried using a nested structure which comprised of 
 ArrayLists within ArrayLists. But accessing products was tedious.
 Hence we used HASHMAPS instead.
@@ -84,7 +84,7 @@ Classes used :
 
 
 
-LEARNINGS FROM THIS PROJECT : 
+#LEARNINGS FROM THIS PROJECT : 
 We had an experience working with real life like problem and 
 solving it using data structures and algorithms.
 We used our theoretical knowledge of data structures and practically
@@ -92,7 +92,7 @@ implemented a use case.
 
 
 
-WHAT'S NEXT FOR THE PROJECT : 
+#WHAT'S NEXT FOR THE PROJECT : 
 > We could enable profiles for owner and customer.
 > We could connect a database to keep check of stock.
 > We could maintain a database for registered users and their 
