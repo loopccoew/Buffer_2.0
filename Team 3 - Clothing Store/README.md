@@ -5,9 +5,9 @@ TOPIC : Clothing Store
 
 
 TEAM MEMBERS : 
-  Shwetali Jadhav (T.Y. IT)
-  Sampada Nemade (T.Y. IT)
-  Shravani Zope (T.Y. Comp)
+ > Shwetali Jadhav (T.Y. IT),
+ > Sampada Nemade (T.Y. IT),
+ > Shravani Zope (T.Y. Comp)
 
 
 
@@ -16,12 +16,12 @@ This program works as an offline clothing store.
 We have enlisted various categories according to which a 
 customer can choose and buy products.
   Features :
-  > Displaying categories of products
-  > Choosing a product
-  > Adding it to cart
-  > Option for removal of a product from cart before billing
-  > Billing (with GST)
-  > Exit
+  > Displaying categories of products, 
+  >  Choosing a product,
+  >  Adding it to cart,
+  >  Option for removal of a product from cart before billing,
+  >  Billing (with GST),
+  >  Exit
 
 
 
@@ -69,16 +69,16 @@ We also used ARRAYLISTS for storing the details of the products.
 
 Classes used :
   #Product
-   > gender
-   > category
-   > productType
-   > brand
-   > productPrice
-   > productName
+   > gender,
+   > category,
+   > productType,
+   > brand,
+   > productPrice,
+   > productName,
    > productSize
   #Item
-   > size
-   > name
+   > size,
+   > name,
    > price
 
 
@@ -92,10 +92,10 @@ implemented a use case.
 
 
 WHAT'S NEXT FOR THE PROJECT : 
-> We could enable profiles for owner and customer
-> We could connect a database to keep check of stock
+> We could enable profiles for owner and customer.
+> We could connect a database to keep check of stock.
 > We could maintain a database for registered users and their 
-  purchases as well
+  purchases as well.
 
 
 
