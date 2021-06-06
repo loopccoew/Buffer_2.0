@@ -71,6 +71,7 @@ We also used ARRAYLISTS for storing the details of the products.
   > Java ArrayList class is non synchronized.
 
 Classes used :
+
   #Product
    > gender,
    > category,
