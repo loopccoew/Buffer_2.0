@@ -80,6 +80,7 @@ Classes used :
    * productPrice,
    * productName,
    * productSize
+   
   #Item
    * size,
    * name,
