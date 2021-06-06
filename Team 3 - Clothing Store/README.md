@@ -12,6 +12,7 @@ TEAM MEMBERS :
 
 
 INTRODUCTION : 
+
 This program works as an offline clothing store. 
 We have enlisted various categories according to which a 
 customer can choose and buy products.
