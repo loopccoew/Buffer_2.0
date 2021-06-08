@@ -34,23 +34,6 @@ public class Key2 {
 		return Objects.equals(hname_type, other.hname_type);
 	}
 	
-	/*@Override
-	public int hashCode() {
-		return Objects.hash(hname_type);
-	}
-	
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!(obj instanceof Key2)) {
-			return false;
-		}
-		Key2 other = (Key2) obj;
-		return Objects.equals(hname_type, other.hname_type);
-	}*/
 	
 	
 

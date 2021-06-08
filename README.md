@@ -20,6 +20,8 @@ b) Time Management and how to work efficiently with all the members of the team.
 
 
 
-WHAT'S NEXT FOR OUR PROJECT:-
--> We plan to make our project Graphical User Interface so that it would be more user friendly.
 
+WHAT'S NEXT FOR OUR PROJECT:-
+-> We plan to make our project Graphical User Interface so that it would be more user friendly.We would like to add some more functionalities in the code.
+
+Note: Please make sure you open the text files in the project folder and not in the source folder.You may get a File not found exception if you open it in the src folder.

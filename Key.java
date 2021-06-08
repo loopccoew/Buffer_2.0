@@ -33,32 +33,6 @@ public class Key {
 		return Objects.equals(flatNumber, other.flatNumber);
 	}
 
-	/*@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((flatNumber == null) ? 0 : flatNumber.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!(obj instanceof Key)) {
-			return false;
-		}
-		Key other = (Key) obj;
-		if (flatNumber == null) {
-			if (other.flatNumber != null) {
-				return false;
-			}
-		} else if (!flatNumber.equals(other.flatNumber)) {
-			return false;
-		}
-		return true;
-	}*/
 	
 	
 

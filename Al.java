@@ -1,18 +1,16 @@
 package logic;
 import java.util.Arrays;
-	//import java.util.Scanner;
+	
 		public class Al 
 		{
 		private static final int INITIAL_CAPACITY = 5;
 	    private int size ;
 		private String[] elementData ;
-	    //private String elementData[20];
+	    
 	    
 		public Al() {
 		
 			this.elementData= new String[INITIAL_CAPACITY];
-			//this.elementData[0]="abc";
-			//this.elementData[1]="xyz";
 			for(int i=0;this.elementData[i]!=null;i++) 
 				size=i+1;
 		}

@@ -25,20 +25,9 @@ public class Value {
 		return phoneNumbers;
 	}
 
-	/*@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((familyMembers == null) ? 0 : familyMembers.hashCode());
-		result = prime * result + ((phoneNumbers == null) ? 0 : phoneNumbers.hashCode());
-		return result;
-	}*/
+	
 
-	/*@Override
-	public int hashCode() {
-		return Objects.hash(familyMembers, phoneNumbers);
-	}*/
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
