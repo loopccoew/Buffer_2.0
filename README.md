@@ -3,3 +3,5 @@ Buffer_2.0 repo to submit your projects to.Repository containing folder-wise cod
 
 Each folder should contain a separate README to describe the files and project objective..
 
+Objective of the Project- Create a text editor which implements all the functions of a basic Notepad using Data Structures.
+
