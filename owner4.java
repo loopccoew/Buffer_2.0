@@ -3,7 +3,7 @@ import java.util.*;
 
 
 
-//stock,employee,bill,items,offers,customer,department
+//stock,bill,items,offers,customer,department
 class node
 {
 	node left,right;
@@ -16,7 +16,7 @@ class node
 	}
 }
 
-class btree 
+class btree  // class for binary tree creation and other operations
 {
 	node root;
 	btree(){
@@ -129,6 +129,7 @@ class btree
 			  
 	}
 	
+	
 }
 
 
@@ -140,7 +141,7 @@ class Item
 	int item_id;       // item ID
 	float item_price;  // price of item
 	int item_discount;  // discount on item(if applicable)
-	int item_quantity;  // Quantity of particular item
+	int item_quantity;  // Quantity of particular item present in stock
 
 	Item()
 	{
@@ -203,14 +204,14 @@ public class owner4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
     
-      btree b1=new btree();
-      Item I2[]=new Item[100];
+      btree b1=new btree();  // object of btree class
+      Item I2[]=new Item[100];   // object of Item class
       int data,size,option;
       String n;
       Scanner s1=new Scanner (System.in);
       System.out.println("Enter the no. of types of items in a shop-");
       size=s1.nextInt();
-      size++;
+     
       
       do
       {
@@ -218,7 +219,7 @@ public class owner4 {
     	  option=s1.nextInt();
     	  switch(option)
     	  {
-    	  case 1:
+    	  case 1:// calling accept and create functions
                  for(int i=0;i<size;i++)
                  {
         	        I2[i]=new Item();
@@ -230,14 +231,14 @@ public class owner4 {
   	             b1.show();
   	             System.out.println("\n___________________________________________________________");
                  break;
-    	  case 2: 
+    	  case 2: // calling display function
     		    for(int i=0;i<size;i++)
                 {
     		      System.out.println("\nFor item "+(i+1)+" -");
  	              I2[i].display();
  	            } 
     		    break;
-    	  case 3:
+    	  case 3: // calling search function
     				int id,res;
     				System.out.println("\nEnter the ID of item that you want to SEARCH-");
     				id=s1.nextInt();
@@ -259,20 +260,40 @@ public class owner4 {
     			   System.out.println("\nUpdated Details-");
     			   I2[res1].display();
     			   break;
-    	  case 5:// to create bill for owner
-    		    int i1=0,i2=0,ch=0,sum=0;
+    	  case 5:// to create bill for owner & printing bill in particular form
+    		    int i1=0,ch=0,j=0;
+    		    float sum=0,sum1=0;
+    		    int ind[]=new int[100];
+    		    int i2[]=new int[100];
+    		    float total[]=new float[100];
     			String ch1;
     			do {
     			System.out.println("Enter ID of item(purchased by customer)-");
     			i1=s1.nextInt();
     			System.out.println("Enter the quantity of item(purchased by customer)-");
-    			i2=s1.nextInt();
-    			ch=b1.search(i1,0);
-    			I2[ch].item_price-=(I2[ch].item_discount*I2[ch].item_price*0.01);
-    			sum+=I2[ch].item_price*i2;
+    			i2[j]=s1.nextInt();
+    			ind[j]=b1.search(i1, 0);
+    			//ch=b1.search(i1,0);
+    			sum1=(float)(I2[ind[j]].item_price-(I2[ind[j]].item_discount*I2[ind[j]].item_price*0.01));
+    			total[j]=sum1*i2[j];
+    			sum+=sum1*i2[j];
+    		
+    			j++;
     			System.out.println("More item purchased? (y/n)-");
     			ch1=s1.next();
     			}while(ch1.contentEquals("y"));
+    			System.out.println("_______________________________________________________________________________________________________________________________________________");
+    			  
+    			System.out.println("\t\tItem Name\t\tQuantity\t\tPrice\t\tDiscount\t\tPrice after discount");
+    			for(int i=0;i<j;i++)
+    			{
+    				
+    				System.out.println("\n_______________________________________________________________________________________________________________________________________________");
+    			    System.out.print("\n\t\t"+I2[ind[i]].item_name+"\t\t\t"+i2[i]+"\t\t\t"+I2[ind[i]].item_price+"\t\t"+I2[ind[i]].item_discount+"\t\t\t"+total[i]);
+    			}
+    			System.out.println("\n_______________________________________________________________________________________________________________________________________________");
+    			System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tTotal= "+sum+" Rs only/-");
+    			System.out.println("_______________________________________________________________________________________________________________________________________________");
     			System.out.println("Total bill of sold items is "+sum+" Rs. only/-");
     		      break;
     	  case 6: // to add more items
@@ -290,8 +311,9 @@ public class owner4 {
  	             System.out.println("\n___________________________________________________________");
  	             break;
     		    
-    	  case 7: System.out.println("You exited!!");
-    	            break;
+    	  case 7:
+    		     System.out.println("You exited!!");
+    	         break;
     			
     	  }
     	  
@@ -306,123 +328,21 @@ public class owner4 {
 
 /*
   Enter the no. of types of items in a shop-
-3
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
-1
-For item 1 -
-__________________________________________________
-Item Name: 
-T-shirt
-Item Department: 
-clothing
-Item ID: 
-1122
-Item Price: 
-580
-Is discount applicable on this item?(y/n): 
-n
-Item Quantity: 
-100
-___________________________________________________
-For item 2 -
-__________________________________________________
-Item Name: 
-maggie
-Item Department: 
-food
-Item ID: 
-345
-Item Price: 
-65
-Is discount applicable on this item?(y/n): 
-n
-Item Quantity: 
-100
-___________________________________________________
-For item 3 -
-__________________________________________________
-Item Name: 
-towel
-Item Department: 
-clothing
-Item ID: 
-1234
-Item Price: 
-350
-Is discount applicable on this item?(y/n): 
-n
-Item Quantity: 
-100
-___________________________________________________
-For accepted data, BTree formed is as follows- 
-345 1122 1234 
-___________________________________________________________
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
 2
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+1                                                                          
+
 For item 1 -
-__________________________________________
-Item Name: T-shirt
-Item Department: clothing
-Item ID: 1122
-Item Price: 580.0
-Item Discount: 0 %
-Item Quantity: 100
-__________________________________________
-For item 2 -
-__________________________________________
-Item Name: maggie
-Item Department: food
-Item ID: 345
-Item Price: 65.0
-Item Discount: 0 %
-Item Quantity: 100
-__________________________________________
-For item 3 -
-__________________________________________
-Item Name: towel
-Item Department: clothing
-Item ID: 1234
-Item Price: 350.0
-Item Discount: 0 %
-Item Quantity: 100
-__________________________________________
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
-3
-Enter the ID of item that you want to SEARCH-
-1234
-Item Present!
-__________________________________________
-Item Name: towel
-Item Department: clothing
-Item ID: 1234
-Item Price: 350.0
-Item Discount: 0 %
-Item Quantity: 100
-__________________________________________
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
-4
-Enter the ID of item that you want to UPDATE-
-1122
-Item Present!
-Present Details-
-__________________________________________
-Item Name: T-shirt
-Item Department: clothing
-Item ID: 1122
-Item Price: 580.0
-Item Discount: 0 %
-Item Quantity: 100
-__________________________________________
-Enter New Details-
 __________________________________________________
 Item Name: 
-T-shirt
+Jeans
 Item Department: 
 clothing
 Item ID: 
-1122
+1234
 Item Price: 
-600
+900
 Is discount applicable on this item?(y/n): 
 y
 Item Discount(in %): 
@@ -430,60 +350,248 @@ Item Discount(in %):
 Item Quantity: 
 100
 ___________________________________________________
-Updated Details-
-__________________________________________
-Item Name: T-shirt
-Item Department: clothing
-Item ID: 1122
-Item Price: 600.0
-Item Discount: 20 %
-Item Quantity: 100
-__________________________________________
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
+
+For item 2 -
+__________________________________________________
+Item Name: 
+Maggie
+Item Department: 
+Food
+Item ID: 
+5566
+Item Price: 
+65
+Is discount applicable on this item?(y/n): 
+n
+Item Quantity: 
+150
+___________________________________________________
+
+For accepted data, BTree formed is as follows- 
+1234 5566 
+___________________________________________________________
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
 2
+
 For item 1 -
 __________________________________________
-Item Name: T-shirt
+Item Name: Jeans
 Item Department: clothing
-Item ID: 1122
-Item Price: 600.0
+Item ID: 1234
+Item Price: 900.0
 Item Discount: 20 %
 Item Quantity: 100
 __________________________________________
+
 For item 2 -
 __________________________________________
-Item Name: maggie
-Item Department: food
-Item ID: 345
+Item Name: Maggie
+Item Department: Food
+Item ID: 5566
 Item Price: 65.0
 Item Discount: 0 %
-Item Quantity: 100
+Item Quantity: 150
 __________________________________________
-For item 3 -
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+6
+__________________________________________________
+Item Name: 
+T-shirt
+Item Department: 
+clothing
+Item ID: 
+1122
+Item Price: 
+560
+Is discount applicable on this item?(y/n): 
+n
+Item Quantity: 
+175
+___________________________________________________
+Do you want to add more items?(y/n)-
+y
+__________________________________________________
+Item Name: 
+Tea
+Item Department: 
+Food
+Item ID: 
+4334
+Item Price: 
+88
+Is discount applicable on this item?(y/n): 
+n
+Item Quantity: 
+100
+___________________________________________________
+Do you want to add more items?(y/n)-
+n
+
+For accepted data, BTree formed is as follows- 
+1122 1234 4334 5566 
+___________________________________________________________
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+2
+
+For item 1 -
 __________________________________________
-Item Name: towel
+Item Name: Jeans
 Item Department: clothing
 Item ID: 1234
-Item Price: 350.0
+Item Price: 900.0
+Item Discount: 20 %
+Item Quantity: 100
+__________________________________________
+
+For item 2 -
+__________________________________________
+Item Name: Maggie
+Item Department: Food
+Item ID: 5566
+Item Price: 65.0
+Item Discount: 0 %
+Item Quantity: 150
+__________________________________________
+
+For item 3 -
+__________________________________________
+Item Name: T-shirt
+Item Department: clothing
+Item ID: 1122
+Item Price: 560.0
+Item Discount: 0 %
+Item Quantity: 175
+__________________________________________
+
+For item 4 -
+__________________________________________
+Item Name: Tea
+Item Department: Food
+Item ID: 4334
+Item Price: 88.0
 Item Discount: 0 %
 Item Quantity: 100
 __________________________________________
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+3
+
+Enter the ID of item that you want to SEARCH-
+1122
+Item Present!
+__________________________________________
+Item Name: T-shirt
+Item Department: clothing
+Item ID: 1122
+Item Price: 560.0
+Item Discount: 0 %
+Item Quantity: 175
+__________________________________________
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+3
+
+Enter the ID of item that you want to SEARCH-
+1112
+Item not present in stock.
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+4
+
+Enter the ID of item that you want to UPDATE-
+4334
+Item Present!
+
+Present Details-
+__________________________________________
+Item Name: Tea
+Item Department: Food
+Item ID: 4334
+Item Price: 88.0
+Item Discount: 0 %
+Item Quantity: 100
+__________________________________________
+
+Enter New Details-
+__________________________________________________
+Item Name: 
+Tea
+Item Department: 
+grocery
+Item ID: 
+4334
+Item Price: 
+88
+Is discount applicable on this item?(y/n): 
+y
+Item Discount(in %): 
+5
+Item Quantity: 
+100
+___________________________________________________
+
+Updated Details-
+__________________________________________
+Item Name: Tea
+Item Department: grocery
+Item ID: 4334
+Item Price: 88.0
+Item Discount: 5 %
+Item Quantity: 100
+__________________________________________
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+2
+
+For item 1 -
+__________________________________________
+Item Name: Jeans
+Item Department: clothing
+Item ID: 1234
+Item Price: 900.0
+Item Discount: 20 %
+Item Quantity: 100
+__________________________________________
+
+For item 2 -
+__________________________________________
+Item Name: Maggie
+Item Department: Food
+Item ID: 5566
+Item Price: 65.0
+Item Discount: 0 %
+Item Quantity: 150
+__________________________________________
+
+For item 3 -
+__________________________________________
+Item Name: T-shirt
+Item Department: clothing
+Item ID: 1122
+Item Price: 560.0
+Item Discount: 0 %
+Item Quantity: 175
+__________________________________________
+
+For item 4 -
+__________________________________________
+Item Name: Tea
+Item Department: grocery
+Item ID: 4334
+Item Price: 88.0
+Item Discount: 5 %
+Item Quantity: 100
+__________________________________________
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
 5
 Enter ID of item(purchased by customer)-
-1122
+5566
 Enter the quantity of item(purchased by customer)-
 2
-Item Present!
-More item purchased? (y/n)-
-n
-Total bill of sold items is 960 Rs. only/-
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
-5
-Enter ID of item(purchased by customer)-
-345
-Enter the quantity of item(purchased by customer)-
-4
 Item Present!
 More item purchased? (y/n)-
 y
@@ -493,10 +601,33 @@ Enter the quantity of item(purchased by customer)-
 1
 Item Present!
 More item purchased? (y/n)-
+y
+Enter ID of item(purchased by customer)-
+4334
+Enter the quantity of item(purchased by customer)-
+3
+Item Present!
+More item purchased? (y/n)-
 n
-Total bill of sold items is 610 Rs. only/-
-Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Exit
-6
-You exited!!
-*/
+_______________________________________________________________________________________________________________________________________________
+		Item Name		Quantity		Price		Discount		Price after discount
 
+_______________________________________________________________________________________________________________________________________________
+
+		Maggie			2			  65.0		     0			           130.0
+_______________________________________________________________________________________________________________________________________________
+
+		Jeans			1			  900.0		     20			           720.0
+_______________________________________________________________________________________________________________________________________________
+
+		Tea			   3			   88.0		      5			          250.79999
+_______________________________________________________________________________________________________________________________________________
+												                       Total= 1100.8 Rs only/-
+_______________________________________________________________________________________________________________________________________________
+Total bill of sold items is 1100.8 Rs. only/-
+
+Enter operation-1]Accept 2]Display 3]Search 4]Update 5]Create a Bill 6]Add item 7]Exit
+7
+You exited!!
+
+*/
